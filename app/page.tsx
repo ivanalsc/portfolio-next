@@ -61,7 +61,7 @@ export default function Home() {
               </div>
               <div className="flex flex-col justify-between">
                 <div>
-                  <div className="flex space-x-2 text-s mb-4">
+                  <div className="flex space-x-2 text-s mb-4 flex-wrap justify-start">
                   <span>Next</span>
                     <span>Tailwind CSS</span>
                     <span>Shadcn/ui</span>
@@ -97,7 +97,7 @@ export default function Home() {
               </div>
               <div className="flex flex-col justify-between">
                 <div>
-                  <div className="flex space-x-2 text-s mb-4">
+                  <div className="flex space-x-2 text-s mb-4 flex-wrap justify-start">
                     <span>Vite</span>
                     <span>React</span>
                     <span>TypeScript</span>
@@ -138,7 +138,7 @@ export default function Home() {
               </div>
               <div className="flex flex-col justify-between">
                 <div>
-                  <div className="flex space-x-2 text-s mb-4">
+                  <div className="flex space-x-2 text-s mb-4 flex-wrap justify-start">
                   <span>Next</span>
                     <span>Tailwind CSS</span>
                     <span>Shadcn/ui</span>
