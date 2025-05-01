@@ -1,19 +1,17 @@
 import Link from "next/link"
 import Image from "next/image"
 import { ArrowUpRight, Mail } from "lucide-react"
+import MusicAlbumShowcase from "@/components/music/music-showcase"
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-[#f8f7f2] text-[#1a1a1a] flex flex-col">
       <header className="container mx-auto px-4 py-6 flex justify-between items-center border-b border-[#e0ddd5]">
         <div>
-          <h2 className="text-sm font-normal">Frontend Developer</h2>
-          <h1 className="text-sm font-normal">Ivana Sosa Cordero</h1>
+          <span className="text-sm font-normal">{"</>"}</span>
         </div>
         <nav className="hidden md:flex items-center space-x-8">
-          <Link href="/" className="text-sm hover:underline">
-            Home
-          </Link>
+        
           <Link href="#playground" className="text-sm hover:underline">
             Playground
           </Link>
@@ -31,7 +29,7 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-8">
             <div>
               <h1 className="text-4xl md:text-5xl font-normal leading-tight">
-                My name is Ivana
+                My name is Ivana.
                 <br />
                 Frontend Developer
                 <br />based in Argentina
@@ -39,16 +37,15 @@ export default function Home() {
             </div>
             <div className="flex flex-col justify-between">
               <div className="space-y-1 text-right">
-                <p className="text-sm">Frontend Development</p>
-                <p className="text-sm">Interactive Experiences</p>
+                <p className="text-sm">{"</>"}</p>
               </div>
             </div>
           </div>
         </section>
 
         <section id="playground" className="container mx-auto px-4 py-12 border-t border-[#e0ddd5]">
-          <h2 className="text-sm mb-2">Playground</h2>
-          <p className="mb-2 text-xs">A selection of recent personal projects where I explore ideas, try new tools, and have fun building.</p>
+          <h2 className="text-sm mb-8">Playground</h2>
+          <p className="mb-8 text-s">A selection of recent personal projects where I explore ideas, try new tools, and have fun building.</p>
 
           <div className="space-y-24">
             {/* Project 1 */}
@@ -64,16 +61,62 @@ export default function Home() {
               </div>
               <div className="flex flex-col justify-between">
                 <div>
-                  <div className="flex space-x-2 text-xs mb-4">
-                    <span>Frontend Development</span>
+                  <div className="flex space-x-2 text-s mb-4">
+                  <span>Next</span>
+                    <span>Tailwind CSS</span>
+                    <span>Shadcn/ui</span>
+                    <span>Zustand</span>
+                    <span>Storybook</span>
                   </div>
                   <h3 className="text-2xl font-normal mb-4">Ecommerce components — Small UI Library</h3>
                   <p className="text-sm text-gray-600 mb-6">
-                  Reusable, accessible, and production-ready UI components for modern e-commerce apps — built with Next.js, shadcn/ui, Zustand, and Tailwind CSS.
+                  Reusable, accessible, and production-ready UI components for modern e-commerce apps — built with Next.js, shadcn/ui, Zustand, and Tailwind CSS. <br/>
+                  Documentes in Storybook.
                   </p>
                 </div>
                 <Link
                   href="https://ecommerce-components-ten.vercel.app/?path=/story/components-productgrid--default"
+                  target="_blank"
+                  className="inline-flex items-center text-sm border border-[#1a1a1a] rounded-full px-6 py-2 hover:bg-[#1a1a1a] hover:text-white transition-colors w-fit"
+                >
+                  View live project
+                  <ArrowUpRight className="ml-2 h-4 w-4" />
+                </Link>
+              </div>
+            </div>
+             {/* Project 2 */}
+             <div className="grid md:grid-cols-2 gap-8">
+              <div className="bg-[#f0efe9] rounded-lg overflow-hidden">
+                <Image
+                  src="/screenshots/art-gallery.png"
+                  alt="Art Gallery project preview"
+                  width={800}
+                  height={600}
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+              <div className="flex flex-col justify-between">
+                <div>
+                  <div className="flex space-x-2 text-s mb-4">
+                    <span>Vite</span>
+                    <span>React</span>
+                    <span>TypeScript</span>
+                    <span>Tailwind CSS</span>
+                    <span>Tanstack Query</span>
+                    <span>Framer Motion</span>
+
+                  </div>
+                  <h3 className="text-2xl font-normal mb-4">Art Gallery — Web gallery of Art Institute of Chicago</h3>
+                  <p className="text-sm text-gray-600 mb-6">
+                  An art gallery application that fetches data from the Art Institute of Chicago API.
+
+                  Browse through artists and view their individual artworks.<br />
+                  Made in React with smooth Framer Motion animations.
+                                    </p>
+                </div>
+                <Link
+                  href="https://art-gallery-tawny.vercel.app/"
+                  target="_blank"
                   className="inline-flex items-center text-sm border border-[#1a1a1a] rounded-full px-6 py-2 hover:bg-[#1a1a1a] hover:text-white transition-colors w-fit"
                 >
                   View live project
@@ -82,7 +125,7 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Project 2 */}
+            {/* Project 3 */}
             <div className="grid md:grid-cols-2 gap-8">
               <div className="bg-[#f0efe9] rounded-lg overflow-hidden">
                 <Image
@@ -95,9 +138,12 @@ export default function Home() {
               </div>
               <div className="flex flex-col justify-between">
                 <div>
-                  <div className="flex space-x-2 text-xs mb-4">
-                    <span>Frontend Development</span>
-                    <span>Interactive Design</span>
+                  <div className="flex space-x-2 text-s mb-4">
+                  <span>Next</span>
+                    <span>Tailwind CSS</span>
+                    <span>Shadcn/ui</span>
+                    <span>Supabase</span>
+                    <span>V0</span>
                   </div>
                   <h3 className="text-2xl font-normal mb-4">RNDM — Web for tracking series, movies, books and music</h3>
                   <p className="text-sm text-gray-600 mb-6">
@@ -107,6 +153,7 @@ export default function Home() {
                 </div>
                 <Link
                   href="https://github.com/ivanalsc/RNDM"
+                  target="_blank"
                   className="inline-flex items-center text-sm border border-[#1a1a1a] rounded-full px-6 py-2 hover:bg-[#1a1a1a] hover:text-white transition-colors w-fit"
                 >
                   View repo (Work in progress)
@@ -122,7 +169,7 @@ export default function Home() {
             <div>
               <h2 className="text-sm mb-8">About</h2>
               <p className="text-lg mb-6">
-              Frontend Developer with 4+ years of experience building scalable, accessible user interfaces for e-commerce platforms.
+              I'm a Frontend Developer with 4+ years of experience building scalable, accessible user interfaces for e-commerce platforms.
               </p>
               <p className="text-lg mb-6">
               Driven by curiosity and a constant search for new challenges, I’m currently learning and evolving toward a Design Engineer role — focusing on building design systems, improving accessibility, and enhancing the developer experience. I enjoy crafting reusable components with React, TypeScript, and Tailwind CSS, and I thrive in collaborative teams. 
@@ -141,7 +188,6 @@ export default function Home() {
                   <li>Shadcn/UI</li>
                   <li>Framer Motion</li>
                   <li>Storybook</li>
-                  <li>Performance Optimization</li>
                 </ul>
               </div>
               <div>
@@ -167,6 +213,10 @@ export default function Home() {
             </div>
        
           </div>
+        </section>
+        
+        <section id="contact" className="container mx-auto px-4 py-24 border-t border-[#e0ddd5]">
+          <MusicAlbumShowcase />
         </section>
       </main>
 

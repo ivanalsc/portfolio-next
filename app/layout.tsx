@@ -21,7 +21,6 @@ export const metadata: Metadata = {
     }
   ],
   description: "Portfolio of Ivana Sosa Cordero, a Frontend Developer and Design Engineer based in Argentina.",
-    generator: 'v0.dev'
 }
 
 export default function RootLayout({
