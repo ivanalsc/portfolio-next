@@ -8,7 +8,6 @@ export default function Home() {
     <div className="min-h-screen bg-[#f8f7f2] text-[#1a1a1a] flex flex-col">
       <header className="container mx-auto px-4 py-6 flex justify-between items-center border-b border-[#e0ddd5]">
         <div>
-          <span className="text-sm font-normal">{"</>"}</span>
         </div>
         <nav className="hidden md:flex items-center space-x-8">
         
@@ -68,10 +67,11 @@ export default function Home() {
                     <span>Zustand</span>
                     <span>Storybook</span>
                   </div>
-                  <h3 className="text-2xl font-normal mb-4">Ecommerce components — Small UI Library</h3>
+                  <h3 className="text-2xl font-normal mb-4">E-commerce UI Components – Lightweight Library</h3>
                   <p className="text-sm text-gray-600 mb-6">
-                  Reusable, accessible, and production-ready UI components for modern e-commerce apps — built with Next.js, shadcn/ui, Zustand, and Tailwind CSS. <br/>
-                  Documentes in Storybook.
+                  Reusable, accessible, and production-ready components for modern e-commerce apps.
+Built with Next.js, Shadcn/ui, Zustand, and Tailwind CSS.<br />
+Fully documented in Storybook.
                   </p>
                 </div>
                 <Link
@@ -106,12 +106,10 @@ export default function Home() {
                     <span>Framer Motion</span>
 
                   </div>
-                  <h3 className="text-2xl font-normal mb-4">Art Gallery — Web gallery of Art Institute of Chicago</h3>
+                  <h3 className="text-2xl font-normal mb-4">Art Gallery – A Virtual Collection from the Art Institute of Chicago</h3>
                   <p className="text-sm text-gray-600 mb-6">
-                  An art gallery application that fetches data from the Art Institute of Chicago API.
-
-                  Browse through artists and view their individual artworks.<br />
-                  Made in React with smooth Framer Motion animations.
+                  Explore artworks and discover artists through a curated web experience powered by the Art Institute of Chicago API.
+                  Built with React and enhanced with smooth animations using Framer Motion.
                                     </p>
                 </div>
                 <Link
@@ -145,10 +143,10 @@ export default function Home() {
                     <span>Supabase</span>
                     <span>V0</span>
                   </div>
-                  <h3 className="text-2xl font-normal mb-4">RNDM — Web for tracking series, movies, books and music</h3>
+                  <h3 className="text-2xl font-normal mb-4">RNDM – Track What You Watch, Read, and Listen To</h3>
                   <p className="text-sm text-gray-600 mb-6">
-                  Web app for tracking watched series and movies, read books, and listened to music.
-                  It can be used as a private log or as a public social feed, where users can share and discover cultural content through recommendations.
+                  A web app for logging your favorite series, movies, books, and music.
+                  Use it as a personal journal or share your taste through a public social feed, where users can explore and recommend cultural content.
                   </p>
                 </div>
                 <Link
@@ -169,25 +167,30 @@ export default function Home() {
             <div>
               <h2 className="text-sm mb-8">About</h2>
               <p className="text-lg mb-6">
-              I'm a Frontend Developer with 4+ years of experience building scalable, accessible user interfaces for e-commerce platforms.
+              I'm a Frontend Developer with over 4 years of experience building scalable, accessible user interfaces for e-commerce platforms.
               </p>
               <p className="text-lg mb-6">
-              Driven by curiosity and a constant search for new challenges, I’m currently learning and evolving toward a Design Engineer role — focusing on building design systems, improving accessibility, and enhancing the developer experience. I enjoy crafting reusable components with React, TypeScript, and Tailwind CSS, and I thrive in collaborative teams. 
+              Driven by curiosity and a passion for continuous growth, I’m currently transitioning into a Design Engineer role — focusing on design systems, accessibility, and developer experience. I enjoy building reusable components with React, TypeScript, and Tailwind CSS, and thrive in collaborative, async-friendly environments.
               </p>
               
             </div>
             <div className="space-y-8">
               <div>
-                <h3 className="text-sm mb-4">Tech Stack</h3>
+                <h3 className="text-sm mb-4">Tech Stack | Skills</h3>
                 <ul className="grid grid-cols-2 gap-2 text-sm">
                 <li>HTML/CSS/Tailwind</li>
 
                   <li>JavaScript/TypeScript</li>
                   <li>React/Next.js</li>
-                  <li>Accessibility</li>
                   <li>Shadcn/UI</li>
                   <li>Framer Motion</li>
+                  <li>Accessibility</li>
                   <li>Storybook</li>
+                  <li>Web performance optimization</li>
+                  <li></li>
+                  <li>Languajes: Spanish (native), English, Portuguese</li>
+
+
                 </ul>
               </div>
               <div>
@@ -222,7 +225,7 @@ export default function Home() {
 
       <footer className="container mx-auto px-4 py-6 border-t border-[#e0ddd5] text-sm">
         <div className="flex justify-between items-center">
-          <p>© 2025 All rights reserved.</p>
+          <p>© 2025</p>
           <div className="flex space-x-4">
            
             <Link href="https://github.com/ivanalsc" className="hover:underline">
