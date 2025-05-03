@@ -188,7 +188,7 @@ Fully documented in Storybook.
                   <li>Storybook</li>
                   <li>Web performance optimization</li>
                   <li></li>
-                  <li>Languajes: Spanish (native), English, Portuguese</li>
+                  <li>Languages: Spanish (native), English, Portuguese</li>
 
 
                 </ul>
