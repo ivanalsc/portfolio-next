@@ -197,7 +197,7 @@ Since 2020 I’ve been working as a web developer, building interfaces for e-com
                   <li>Storybook</li>
                   <li>Web performance optimization</li>
                   <li></li>
-                  <li>Languajes: Spanish (native), English, Portuguese</li>
+                  <li>Languages: Spanish (native), English, Portuguese</li>
 
 
                 </ul>
