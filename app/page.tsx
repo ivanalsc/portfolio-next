@@ -167,10 +167,19 @@ Fully documented in Storybook.
             <div>
               <h2 className="text-sm mb-8">About</h2>
               <p className="text-lg mb-6">
-              I'm a Frontend Developer with over 4 years of experience building scalable, accessible user interfaces for e-commerce platforms.
+             Since I was a kid, I’ve been fascinated by how technology evolves and transforms our daily lives. I’ve always been curious about how it works, how it improves over time, and how it can make things easier for us.
+
+
+
+
               </p>
+               <p className="text-lg mb-6">
+After finishing high school, I decided to study Educational Psychology because I’m passionate about learning processes and the opportunity to help others improve their educational experiences. I worked for three years in inclusive education and during that time, I felt the need to create an app to support my work. That was my first encounter with development — and from that moment on, I couldn't stop learning and wanting to build more. I discovered that my ideas could come to life through code.
+
+               </p>
               <p className="text-lg mb-6">
-              Driven by curiosity and a passion for continuous growth, I’m currently transitioning into a Design Engineer role — focusing on design systems, accessibility, and developer experience. I enjoy building reusable components with React, TypeScript, and Tailwind CSS, and thrive in collaborative, async-friendly environments.
+Since 2020 I’ve been working as a web developer, building interfaces for e-commerce websites. At the same time, I’m always working on side projects that allow me to keep exploring, learning, and challenging myself. I’m especially interested in staying up to date with tech advancements and AI, and I try to stay curious and in constant motion.
+             
               </p>
               
             </div>
