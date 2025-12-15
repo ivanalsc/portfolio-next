@@ -79,6 +79,14 @@ const albums: Album[] = [
       youtubeId: "D3n9JrAcOBY?si=TxSzJWp3tofiPgEf",
       song: "No tan distintos",
   },
+  {
+    id: "9",
+    title: "Tessellate",
+    artist: "Alt-J",
+    coverUrl: "/altj.png",
+    youtubeId: "ge5nUfUB6N8?si=z_6HJhxQJW7-Om3K",
+    song: "Tessellate",
+},
 ]
 
 export default function MusicAlbumShowcase() {
@@ -218,6 +226,7 @@ export default function MusicAlbumShowcase() {
           className="mt-6 overflow-hidden"
         >
           <YouTubePlayer
+            key={selectedAlbum.youtubeId}
             videoId={selectedAlbum.youtubeId}
             isPlaying={isPlaying}
             onStateChange={(state) => {

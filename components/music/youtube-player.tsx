@@ -27,6 +27,11 @@ export default function YouTubePlayer({ videoId, isPlaying, onStateChange }: You
   const [playerReady, setPlayerReady] = useState(false)
   const [currentVideoId, setCurrentVideoId] = useState(videoId)
 
+  // YouTube espera solo el ID del video, sin parámetros como "?si=..."
+  const getCleanVideoId = (rawId: string) => {
+    return rawId.split(/[?&]/)[0]
+  }
+
   // Load YouTube API
   useEffect(() => {
     if (!window.YT) {
@@ -53,8 +58,9 @@ export default function YouTubePlayer({ videoId, isPlaying, onStateChange }: You
 
   // Handle video ID changes
   useEffect(() => {
-    if (videoId !== currentVideoId) {
-      setCurrentVideoId(videoId)
+    const cleanId = getCleanVideoId(videoId)
+    if (cleanId !== currentVideoId) {
+      setCurrentVideoId(cleanId)
       setPlayerReady(false)
 
       if (playerRef.current) {
@@ -64,7 +70,7 @@ export default function YouTubePlayer({ videoId, isPlaying, onStateChange }: You
 
       // Small timeout to ensure DOM is ready
       setTimeout(() => {
-        initializePlayer(videoId)
+        initializePlayer(cleanId)
       }, 100)
     }
   }, [videoId, currentVideoId])
@@ -84,16 +90,17 @@ export default function YouTubePlayer({ videoId, isPlaying, onStateChange }: You
     }
   }, [isPlaying, playerReady])
 
-  const initializePlayer = (videoId: string) => {
+  const initializePlayer = (rawVideoId: string) => {
+    const cleanId = getCleanVideoId(rawVideoId)
     if (!containerRef.current || !window.YT || !window.YT.Player) {
       // If YouTube API is not ready yet, try again in 100ms
-      setTimeout(() => initializePlayer(videoId), 100)
+      setTimeout(() => initializePlayer(rawVideoId), 100)
       return
     }
 
     try {
       playerRef.current = new window.YT.Player(containerRef.current, {
-        videoId,
+        videoId: cleanId,
         playerVars: {
           autoplay: isPlaying ? 1 : 0,
           controls: 1,
@@ -121,7 +128,11 @@ export default function YouTubePlayer({ videoId, isPlaying, onStateChange }: You
 
   return (
     <div className="aspect-video w-full rounded-xl overflow-hidden">
-      <div ref={containerRef} id={`youtube-player-${videoId}`} className="w-full h-full" />
+      <div
+        ref={containerRef}
+        id={`youtube-player-${getCleanVideoId(videoId)}`}
+        className="w-full h-full"
+      />
     </div>
   )
 }
