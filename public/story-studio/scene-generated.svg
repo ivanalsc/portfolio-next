@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">A Familiar Voice, second version</title><desc id="desc">A wider view of the host, microphone and analog radio equipment.</desc>
+  <rect width="1200" height="720" fill="#1d2529"/><rect x="55" y="55" width="1090" height="580" fill="#333b3d"/>
+  <rect x="90" y="95" width="500" height="230" fill="#111"/><path d="M120 235 Q180 120 245 230 T360 175 T550 245" fill="none" stroke="#ff4b0a" stroke-width="8"/>
+  <circle cx="830" cy="300" r="90" fill="#d2a37d"/><path d="M720 290 Q730 155 830 155 Q930 155 940 290" fill="none" stroke="#111" stroke-width="26"/><rect x="710" y="275" width="35" height="90" rx="16" fill="#111"/><rect x="915" y="275" width="35" height="90" rx="16" fill="#111"/>
+  <path d="M710 450 Q830 395 950 450 L1010 620 L650 620Z" fill="#c8c3b9"/><path d="M520 550 L715 390" stroke="#f3f0e8" stroke-width="14"/><circle cx="510" cy="560" r="48" fill="#111"/><circle cx="510" cy="560" r="27" fill="#ff4b0a"/><circle cx="1080" cy="115" r="22" fill="#ff4b0a"/>
+  <text x="88" y="600" font-family="monospace" font-size="18" fill="#f3f0e8">SCENE 03 / VERSION 02</text>
+</svg>

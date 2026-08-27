@@ -1,251 +1,48 @@
-import Link from "next/link"
-import Image from "next/image"
-import { ArrowUpRight, Mail } from "lucide-react"
-import MusicAlbumShowcase from "@/components/music/music-showcase"
+import Link from "next/link";
+import { Footer } from "@/components/Footer";
+import { Header } from "@/components/Header";
+import { ProjectLink } from "@/components/ProjectLink";
+import { projects } from "@/data/projects";
+import Image from "next/image";
+
+const interests = ["Product design", "Creative AI", "Editorial interfaces", "Storytelling", "Design systems", "Accessibility"];
 
 export default function Home() {
-  return (
-    <div className="min-h-screen bg-[#f8f7f2] text-[#1a1a1a] flex flex-col">
-      <header className="container mx-auto px-4 py-6 flex justify-between items-center border-b border-[#e0ddd5]">
-        <div>
-        </div>
-        <nav className="hidden md:flex items-center space-x-8">
-        
-          <Link href="#playground" className="text-sm hover:underline">
-            Playground
-          </Link>
-          <Link href="#about" className="text-sm hover:underline">
-            About
-          </Link>
-          <Link href="#contact" className="text-sm hover:underline">
-            Get in touch
-          </Link>
-        </nav>
-      </header>
+  return <main>
+    <Header />
+    <section className="hero wrap" aria-labelledby="hero-title">
+      <div className="hero-title" id="hero-title"><span>Curiosity</span><span>Driven</span><span><em>Developer</em> <i>✳</i></span></div>
+      <div className="hero-aside">
+        <div className="portrait"><Image src="/images/ivana-sosa-cordero.jpeg" alt="Ivana Sosa Cordero" width={3023} height={3986} sizes="108px" priority /></div>
+        <p>Frontend developer exploring the intersection of design, technology and ideas.</p>
+        <div className="socials mono"><a href="https://github.com/" target="_blank" rel="noreferrer">↗ Github</a><a href="https://linkedin.com/" target="_blank" rel="noreferrer">↗ LinkedIn</a><a href="mailto:hello@ivanasosa.dev">↗ Email</a></div>
+        <Link className="text-link mono" href="/lab">Explore my lab <span>→</span></Link>
+      </div>
+    </section>
 
-      <main className="flex-1">
-        <section className="container mx-auto px-4 py-24 md:py-32">
-          <div className="grid md:grid-cols-2 gap-8">
-            <div>
-              <h1 className="text-4xl md:text-5xl font-normal leading-tight">
-                My name is Ivana.
-                <br />
-                Frontend Developer
-                <br />based in Argentina
-              </h1>
-            </div>
-            <div className="flex flex-col justify-between">
-              <div className="space-y-1 text-right">
-                <p className="text-sm">{"</>"}</p>
-              </div>
-            </div>
-          </div>
-        </section>
+    <section className="section wrap" aria-labelledby="selected-title">
+      <div className="section-heading mono"><span>01 /</span><h2 id="selected-title">Selected experiments <i>✳</i></h2><span>2025—26</span></div>
+      <div className="selected-grid">{projects.map(project => <ProjectLink key={project.id} project={project} />)}</div>
+    </section>
 
-        <section id="playground" className="container mx-auto px-4 py-12 border-t border-[#e0ddd5]">
-          <h2 className="text-sm mb-8">Playground</h2>
-          <p className="mb-8 text-s">A selection of recent personal projects where I explore ideas, try new tools, and have fun building.</p>
+    <section className="section lab-preview wrap" aria-labelledby="lab-preview-title">
+      <div className="section-heading mono"><span>02 /</span><h2 id="lab-preview-title">In the lab <i>✳</i></h2><span>Ongoing</span></div>
+      <div className="lab-index">
+        {projects.map(project => <Link href={project.slug === "story-studio" ? "/work/story-studio" : `/lab/${project.slug}`} key={project.id}><span className="mono">{project.id}</span><p>{project.title}</p><span>↗</span></Link>)}
+      </div>
+      <Link className="text-link mono" href="/lab">See everything in the lab <span>→</span></Link>
+    </section>
 
-          <div className="space-y-24">
-            {/* Project 1 */}
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="bg-[#f0efe9] rounded-lg overflow-hidden">
-                <Image
-                  src="/screenshots/ecommerce-components.png"
-                  alt="Ecommerce components preview"
-                  width={800}
-                  height={600}
-                  className="w-full h-auto object-cover"
-                />
-              </div>
-              <div className="flex flex-col justify-between">
-                <div>
-                  <div className="flex space-x-2 text-s mb-4 flex-wrap justify-start">
-                  <span>Next</span>
-                    <span>Tailwind CSS</span>
-                    <span>Shadcn/ui</span>
-                    <span>Zustand</span>
-                    <span>Storybook</span>
-                  </div>
-                  <h3 className="text-2xl font-normal mb-4">E-commerce UI Components – Lightweight Library</h3>
-                  <p className="text-sm text-gray-600 mb-6">
-                  Reusable, accessible, and production-ready components for modern e-commerce apps.
-Built with Next.js, Shadcn/ui, Zustand, and Tailwind CSS.<br />
-Fully documented in Storybook.
-                  </p>
-                </div>
-                <Link
-                  href="https://ecommerce-components-ten.vercel.app/?path=/story/components-productgrid--default"
-                  target="_blank"
-                  className="inline-flex items-center text-sm border border-[#1a1a1a] rounded-full px-6 py-2 hover:bg-[#1a1a1a] hover:text-white transition-colors w-fit"
-                >
-                  View live project
-                  <ArrowUpRight className="ml-2 h-4 w-4" />
-                </Link>
-              </div>
-            </div>
-             {/* Project 2 */}
-             <div className="grid md:grid-cols-2 gap-8">
-              <div className="bg-[#f0efe9] rounded-lg overflow-hidden">
-                <Image
-                  src="/screenshots/art-gallery.png"
-                  alt="Art Gallery project preview"
-                  width={800}
-                  height={600}
-                  className="w-full h-auto object-cover"
-                />
-              </div>
-              <div className="flex flex-col justify-between">
-                <div>
-                  <div className="flex space-x-2 text-s mb-4 flex-wrap justify-start">
-                    <span>Vite</span>
-                    <span>React</span>
-                    <span>TypeScript</span>
-                    <span>Tailwind CSS</span>
-                    <span>Tanstack Query</span>
-                    <span>Framer Motion</span>
+    <section className="about wrap" id="about" aria-labelledby="about-title">
+      <div className="section-heading mono"><span>03 /</span><h2 id="about-title">About</h2><span>Buenos Aires</span></div>
+      <p className="about-lead">I’m interested in the space between <em>design</em>, technology and <em>ideas.</em></p>
+      <div className="about-grid"><p>I’m a frontend developer with five years of experience. Increasingly, my work moves across product thinking, visual systems and experimentation. I follow a question until it becomes something I can see, test and build.</p><div><span className="mono">Currently curious about</span><ul>{interests.map(item => <li key={item}>{item}<span>✳</span></li>)}</ul></div></div>
+    </section>
 
-                  </div>
-                  <h3 className="text-2xl font-normal mb-4">Art Gallery – A Virtual Collection from the Art Institute of Chicago</h3>
-                  <p className="text-sm text-gray-600 mb-6">
-                  Explore artworks and discover artists through a curated web experience powered by the Art Institute of Chicago API.
-                  Built with React and enhanced with smooth animations using Framer Motion.
-                                    </p>
-                </div>
-                <Link
-                  href="https://art-gallery-tawny.vercel.app/"
-                  target="_blank"
-                  className="inline-flex items-center text-sm border border-[#1a1a1a] rounded-full px-6 py-2 hover:bg-[#1a1a1a] hover:text-white transition-colors w-fit"
-                >
-                  View live project
-                  <ArrowUpRight className="ml-2 h-4 w-4" />
-                </Link>
-              </div>
-            </div>
-
-            {/* Project 3 */}
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="bg-[#f0efe9] rounded-lg overflow-hidden">
-                <Image
-                  src="/screenshots/rndm.png"
-                  alt="Rndm project preview"
-                  width={800}
-                  height={600}
-                  className="w-full h-auto object-cover"
-                />
-              </div>
-              <div className="flex flex-col justify-between">
-                <div>
-                  <div className="flex space-x-2 text-s mb-4 flex-wrap justify-start">
-                  <span>Next</span>
-                    <span>Tailwind CSS</span>
-                    <span>Shadcn/ui</span>
-                    <span>Supabase</span>
-                    <span>V0</span>
-                  </div>
-                  <h3 className="text-2xl font-normal mb-4">RNDM – Track What You Watch, Read, and Listen To</h3>
-                  <p className="text-sm text-gray-600 mb-6">
-                  A web app for logging your favorite series, movies, books, and music.
-                  Use it as a personal journal or share your taste through a public social feed, where users can explore and recommend cultural content.
-                  </p>
-                </div>
-                <Link
-                  href="https://github.com/ivanalsc/RNDM"
-                  target="_blank"
-                  className="inline-flex items-center text-sm border border-[#1a1a1a] rounded-full px-6 py-2 hover:bg-[#1a1a1a] hover:text-white transition-colors w-fit"
-                >
-                  View repo (Work in progress)
-                  <ArrowUpRight className="ml-2 h-4 w-4" />
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section id="about" className="container mx-auto px-4 py-24 border-t border-[#e0ddd5]">
-          <div className="grid md:grid-cols-2 gap-12">
-            <div>
-              <h2 className="text-sm mb-8">About</h2>
-              <p className="text-lg mb-6">
-             Since I was a kid, I’ve been fascinated by how technology evolves and transforms our daily lives. I’ve always been curious about how it works, how it improves over time, and how it can make things easier for us.
-
-
-
-
-              </p>
-               <p className="text-lg mb-6">
-After finishing high school, I decided to study Educational Psychology because I’m passionate about learning processes and the opportunity to help others improve their educational experiences. I worked for three years in inclusive education and during that time, I felt the need to create an app to support my work. That was my first encounter with development — and from that moment on, I couldn't stop learning and wanting to build more. I discovered that my ideas could come to life through code.
-
-               </p>
-              <p className="text-lg mb-6">
-Since 2020 I’ve been working as a web developer, building interfaces for e-commerce websites. At the same time, I’m always working on side projects that allow me to keep exploring, learning, and challenging myself. I’m especially interested in staying up to date with tech advancements and AI, and I try to stay curious and in constant motion.
-             
-              </p>
-              
-            </div>
-            <div className="space-y-8">
-              <div>
-                <h3 className="text-sm mb-4">Tech Stack | Skills</h3>
-                <ul className="grid grid-cols-2 gap-2 text-sm">
-                <li>HTML/CSS/Tailwind</li>
-
-                  <li>JavaScript/TypeScript</li>
-                  <li>React/Next.js</li>
-                  <li>Shadcn/UI</li>
-                  <li>Framer Motion</li>
-                  <li>Accessibility</li>
-                  <li>Storybook</li>
-                  <li>Web performance optimization</li>
-                  <li></li>
-                  <li>Languages: Spanish (native), English, Portuguese</li>
-
-
-                </ul>
-              </div>
-              <div>
-                <h3 className="text-sm mb-4">Experience</h3>
-                <div className="space-y-4 text-sm">
-                  <div>
-                    <p className="font-medium"> Frontend Developer</p>
-                    <p>Innew — 2020-Present</p>
-                  </div>
-                
-              
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section id="contact" className="container mx-auto px-4 py-24 border-t border-[#e0ddd5]">
-          <div className="grid md:grid-cols-2 gap-8">
-            <div>
-              <h2 className="text-sm mb-8"><Link href="mailto:ivanasosacordero@gmail.com" className="text-lg underline hover:no-underline flex items-center gap-1">Get in touch <Mail size={20} strokeWidth={2} /></Link></h2>
-             
-            </div>
-       
-          </div>
-        </section>
-        
-        <section id="contact" className="container mx-auto px-4 py-24 border-t border-[#e0ddd5]">
-          <MusicAlbumShowcase />
-        </section>
-      </main>
-
-      <footer className="container mx-auto px-4 py-6 border-t border-[#e0ddd5] text-sm">
-        <div className="flex justify-between items-center">
-          <p>© 2025</p>
-          <div className="flex space-x-4">
-           
-            <Link href="https://github.com/ivanalsc" className="hover:underline">
-              GitHub
-            </Link>
-            <Link href="https://www.linkedin.com/in/ivana-sosa-cordero/" className="hover:underline">
-              LinkedIn
-            </Link>
-          </div>
-        </div>
-      </footer>
-    </div>
-  )
+    <section className="currently wrap" aria-labelledby="currently-title">
+      <h2 className="mono" id="currently-title">Currently ✳</h2>
+      <dl>{[["Exploring", "Product design + AI"], ["Building", "Small experiments"], ["Learning", "Creative technology"], ["Playing", "Bass / music"]].map(([term, detail]) => <div key={term}><dt className="mono">{term}</dt><dd>{detail}</dd></div>)}</dl>
+    </section>
+    <Footer />
+  </main>;
 }
